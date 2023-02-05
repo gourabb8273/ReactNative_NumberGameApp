@@ -14,7 +14,7 @@ import {
 
 import PrimaryButton from "../components/ui/PrimaryButton";
 import Colors from "../constants/color";
-import Title from "../components/ui/Title.android";
+import Title from "../components/ui/Title";
 import Card from "../components/ui/Card";
 import InstructionText from "../components/ui/InstructionText";
 
