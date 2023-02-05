@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { View, Text, Alert, StyleSheet, FlatList } from "react-native";
+import { View, Text, Alert, StyleSheet, FlatList, Dimensions } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import NumberContainer from "../components/game/NumberContainer";
@@ -94,7 +94,7 @@ function GameScreen({ userNumber, onGameOver }) {
               guess={itemData.item}
             />
           )}
-          keyExtractor={({ item }) => item}
+          keyExtractor={( item ) => item}
         />
       </View>
     </View>
@@ -103,11 +103,14 @@ function GameScreen({ userNumber, onGameOver }) {
 
 export default GameScreen;
 
+const deviceWidth = Dimensions.get('window').width;
+
 const styles = StyleSheet.create({
   screen: {
-    marginTop: 40,
+    marginTop: deviceWidth < 380? 18:36,
     flex: 1,
     padding: 24,
+    alignItems:'center'
   },
   instructiontext: {
     marginBottom: 12,
