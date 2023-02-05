@@ -8,7 +8,7 @@ import {
   useWindowDimensions,
 } from "react-native";
 import PrimaryButton from "../components/ui/PrimaryButton";
-import Title from "../components/ui/Title";
+import Title from "../components/ui/Title.android";
 
 import Colors from "../constants/color";
 
